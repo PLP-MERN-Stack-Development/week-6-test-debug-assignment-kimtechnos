@@ -1,4 +1,5 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19954925&assignment_repo_type=AssignmentRepo)
+
 # Testing and Debugging MERN Applications
 
 This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.
@@ -6,6 +7,7 @@ This assignment focuses on implementing comprehensive testing strategies for a M
 ## Assignment Overview
 
 You will:
+
 1. Set up testing environments for both client and server
 2. Write unit tests for React components and server functions
 3. Implement integration tests for API endpoints
@@ -69,6 +71,30 @@ mern-testing/
 - Cypress/Playwright: End-to-end testing framework
 - MongoDB Memory Server: In-memory MongoDB for testing
 
+## Testing Strategy
+
+- **Unit Tests:** Located in `client/src/tests/unit/` and `server/tests/unit/`. Use Jest and React Testing Library (client) or Jest (server).
+- **Integration Tests:** Located in `client/src/tests/integration/` and `server/tests/integration/`. Use Jest and Supertest (server), React Testing Library (client).
+- **End-to-End Tests:** Cypress is set up in `client/cypress/` (create tests for user flows).
+
+### Running Tests
+
+- Client: `pnpm test:unit`, `pnpm test:integration`, `pnpm test:e2e` (from `client`)
+- Server: `pnpm test:unit`, `pnpm test:integration` (from `server`)
+
+### Coverage
+
+- Run `pnpm test -- --coverage` in client or server to generate coverage reports.
+- Add screenshots of coverage reports to this README.
+
+## Debugging Tools
+
+- **Server Logging:** See `server/src/logger.js` for a simple logging utility. Logs are written to `logs/server.log`.
+- **Global Error Handler:** See `server/src/middleware/errorHandler.js` for Express error handling.
+- **React Error Boundary:** See `client/src/components/ErrorBoundary.jsx` for UI error catching.
+
+Add more details and screenshots as you expand your tests and debugging features.
+
 ## Submission
 
 Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
@@ -85,4 +111,4 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
 - [Supertest Documentation](https://github.com/visionmedia/supertest)
 - [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
+- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices)
